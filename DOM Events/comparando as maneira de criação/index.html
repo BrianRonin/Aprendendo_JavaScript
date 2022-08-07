@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function f(){
+            console.log("teste1")
+            console.log()
+// console.log(this) vai funcionar apenas se tiver o this como 
+// argumento no body (this) e qualquer argumento aqui pra monitorar
+        }
+
+        function f1(e){
+            console.log("teste2")
+            console.log(this) //funciona pois tem ligação
+            console.log(e)//Mostra o evento que monitorar
+            console.log(e.target) // mostra o elemento que esta sofrendo o evento
+        
+        }
+
+        window.onload = function(){
+            let h1 = document.getElementsByTagName("h1")[0]
+
+                	//pelo JS é "click" mas no HTML seria onClick
+            h1.addEventListener("click", f1)
+        }
+
+    </script>
+</head>
+<body>
+    
+    <h1 onclick="f(this)">Title</h1>
+
+</body>
+</html>

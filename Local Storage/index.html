@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+
+    <script>
+//////////////////Pegando a memoria local e convertendo pra objeto////////////////////////////////////////
+
+let a = {nome: "Igor", n1: 7.3}
+
+localStorage.setItem("aluno", JSON.stringify(a))
+
+
+
+
+///////////////////////Criando e Apagando memória local////////////////////////////////////////
+
+   // Aqui criei uma memoria local (programadorbr = "Igor")
+    localStorage.setItem("programadorbr", "Igor")
+
+// E agora mesmo que eu comentar a memoria local vai continuar existindo
+// se eu puxar pelo localStorage.getItem
+        let v = localStorage.getItem("programadorbr")
+        console.log (v)
+
+ // eu poderia apagar essa memoria especifica usando
+    //    localStorage.removeItem("programadorbr")
+
+    //    console.log (v)
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// todo item do localStorage ao puxar ele vem como string mesmo numero
+// mas tem como converter pra objeto, numero, utilizando o JSON.parse(V)
+
+        localStorage.setItem("numero", 5.7)
+        let n = localStorage.getItem("numero")
+        console.log(n)
+// ao puxar o "numero" ele é convertido para string
+        
+       // let n2 = 5.7  //assim é reconhecido como numero
+       // console.log(n2)
+
+// pra imprimir como um objeto e ser reconhecido o numero seria assim
+let n2 = localStorage.getItem("numero")
+console.log(JSON.parse(n2))
+
+//utilizando JSON.parse
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+        //Armazenamento local
+ //window.localStorage  //mudar
+        // localStorage.setItem("nome", "Brian")
+                        //pegar
+        //  localStorage.getItem()
+                        //remover
+        //  localStorage.removeItem()
+                        //vai limpar tudo na memoria
+        //  localStorage.clear()
+
+// O funcionamento do localStorage é basicamente assim
+// você consegue colocar strings na memoria
+//////////////////////////////////////////////////////////////////////////////////////
+
+        onload = function(){
+
+            // carregar as alteração feita na pagina anteriormente
+            
+            let nome = localStorage.getItem("nome")
+            let h1 = document.getElementById("nome")
+            h1.innerHTML = nome
+
+        } 
+
+        function atualizar (element){
+
+            //transformar oque escreve no input para h1
+            
+            let valor = element.value   
+            console.log(valor)
+
+            let h1 = document.getElementById("nome")
+            h1.innerHTML = valor
+
+            localStorage.setItem("nome", valor)
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <h1 id="nome"></h1>
+    <input type="text" oninput="atualizar(this)">
+
+</body>
+</html>

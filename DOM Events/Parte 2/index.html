@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function onOver(elemento){
+
+            elemento.style.backgroundColor = "red"
+
+        }
+        function onOut (elemento){
+
+            elemento.style.backgroundColor = "cornflowerblue"
+
+        }
+        //window.onload = function
+        function loaded(){
+        let t = document.getElementById("titulo")
+        t.innerHTML = "rrr"
+        // t.onclick = mudarText
+
+        t.addEventListener("mouseover", mudarText)
+        t.addEventListener("mouseout", mouseout)
+        t.onclick = (colocarEmMaiusculo, mudarText2)
+        }
+        function mouseout(){
+            this.innerHTML = "Chega Mais"
+        }
+
+        function mudarText(){
+            this.innerHTML = "Não tão perto sou timido!"
+        }
+        function mudarText2(){
+            this.innerHTML = "ainnnn!!!"
+        }
+        function colocarEmMaiusculo(){
+            this.innerHTML = this.innerHTML.toUpperCase()
+        }
+
+    </script>
+
+    <style>
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+            
+        }
+
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body onload="loaded()">
+    
+    <img src="./jure-tovrljan-coronavirus-logos-grey_dezeen_2364_col_8.jpg" alt="">
+    <br>
+    
+    <h1 id="titulo">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX VAGABUNDOOOOOO</h1>
+
+    <br>
+    <div onmouseover="onOver(this)"
+        onmouseout="onOut(this)">Click</div>
+
+    <p onmouseover="onOver(this)"
+    onmouseout="onOut(this)">texto para teste</p>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .botao {
+            position: absolute;
+            
+            left: 50%;
+            top: 470px;
+            transform: translate(-50%, -50% )
+
+        } 
+    
+        .titulo{
+            
+            position: absolute;
+            
+            
+            
+            
+            left: 50%;
+            top: 350px;
+            transform: translate(-50%, -50% )
+
+        }
+
+
+        img{
+            width: 250px;
+            margin: 0px;
+            border-radius: 400px;
+            position: fixed;
+            top: 260px;
+            left: 50%;
+            transform: translate(-50%, -50% )
+
+
+        }
+
+        body{
+            overflow: hidden;
+            padding: 0px;
+            border: 0px;
+            margin: 0px;
+            background-color: black;
+
+        }
+
+        #titulo{
+            color: white;
+            text-align: center;
+            
+        }
+            
+        button{
+            font-size: 40px;
+            position: absolute;
+            border-radius: 200%;
+            padding: 50px;
+            top: 1000px;
+            left: 50%;
+            width: 190px;
+            padding-bottom: 870px;
+            height: 40px;
+            transform: translate(-50%, -50% )
+        }
+        
+        #d{
+            color: white;
+            text-align: center;
+            font-size: 40px;
+        }
+
+    </style>
+
+    <script>
+
+        let pessoas = [
+                        "Brian",
+                        "Alexandre",
+                        "Nira",
+                    ]
+
+        var imagem = document.getElementById("imagem")
+
+        var titulo = document.getElementById("titulo")
+
+        function sortear(element){
+
+            //  titulo.classList.toggle("hide")
+
+            botao.style.backgroundColor = "aqua"
+
+            let np = pessoas.length
+
+            let ns = Math.floor (Math.random() * np)
+
+            document.getElementById("d").innerHTML = pessoas[ns]
+
+            
+
+            console.log(ns)
+
+            switch(ns){
+
+                case 0:
+                document.getElementById("imagem").src="https://pps.whatsapp.net/v/t61.24694-24/267317266_233628075560783_601280988802157614_n.jpg?ccb=11-4&oh=0429fd43f699bd3bffdc4eba2c3bdfde&oe=62149FEB",
+                document.getElementById("botao").innerText = "ಠ_ಠ"
+                document.getElementById("titulo").innerText = ""
+                break
+                case 1:
+                document.getElementById("imagem").src="https://pps.whatsapp.net/v/t61.24694-24/255449616_343928393766780_8858977443938011946_n.jpg?ccb=11-4&oh=01_AVzW3MH2hcLMtW388GiEyCpi87FMz1aGunXqZENC9w6XNw&oe=6215E76A"
+                document.getElementById("botao").innerText = "▀̿Ĺ̯▀̿"
+                document.getElementById("titulo").innerText = ""
+                break
+                case 2:
+                document.getElementById("imagem").src="https://pps.whatsapp.net/v/t61.24694-24/265342296_344460360883342_1707087853007850420_n.jpg?ccb=11-4&oh=7cb893746611f48fa955d85fd7808239&oe=621496E3"
+                document.getElementById("botao").innerText = "v_v"
+                document.getElementById("titulo").innerText = ""
+                break
+
+            }
+            setTimeout(function(){
+            botao.style.backgroundColor = "white"
+            }, 100)
+        }
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+
+    
+        <img id="imagem" src="" alt="">
+        <button id="botao" onclick="sortear()">?_?</button>
+        
+        <div class="botao">
+            <h1 id="d"></h1>
+        </div>
+        
+        <div class="titulo">
+            <h1 id="titulo"> Quem vai lavar a louça hoje?</h1>
+        </div>
+    
+
+</body>
+</html>

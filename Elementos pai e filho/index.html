@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+
+    <script>
+
+        window.onload = function () {
+
+            let d1 = document.getElementById("d1")
+            let h1 = d1.children[0]
+// voce pode acessar elemento filho de um elemento com .children
+// ele vai vim como array para JS então voce [0], [1], escolhera o elemento
+// ou ele vai vim tudo
+            console.log(document.body.children[0].children)
+// se tiver mais camada voce vai abrindo assim com children
+
+            console.log(h1.parentElement)
+// ja o paremtElement vai pegar o elemento pai daquilo com array tambem
+        }
+
+        window.onload = function (){
+            
+            let h22 = document.getElementsByTagName("h1")
+
+            for (let bosta of h22) {
+                console.log(bosta)
+
+                bosta.addEventListener("click", qop)
+
+            }
+
+            function qop(e){
+
+                let t = e.target
+                console.log(t.parentElement)
+            }
+        }
+
+
+
+    </script>
+
+
+</head>
+<body >
+   
+    <div id="d1">
+        <h1>titulo</h1>
+        <p>Qualquer texto</p>
+    </div>
+
+    <div id="d2">
+        <h1>titulo 2</h1>
+        <p>Qualquer texto 2</p>
+    </div>
+
+</body>
+</html>

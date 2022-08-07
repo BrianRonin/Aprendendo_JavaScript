@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        a,
+        abbr,
+        acronym,
+        address,
+        applet,
+        article,
+        aside,
+        audio,
+        b,
+        big,
+        blockquote,
+        body,
+        canvas,
+        caption,
+        center,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        s,
+        samp,
+        section,
+        small,
+        span,
+        strike,
+        strong,
+        sub,
+        summary,
+        sup,
+        table,
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        time,
+        tr,
+        tt,
+        u,
+        ul,
+        var,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline
+        }
+
+        :focus {
+            outline: 0
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:after,
+        blockquote:before,
+        q:after,
+        q:before {
+            content: '';
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        input[type=search]::-webkit-search-cancel-button,
+        input[type=search]::-webkit-search-decoration,
+        input[type=search]::-webkit-search-results-button,
+        input[type=search]::-webkit-search-results-decoration {
+            -webkit-appearance: none;
+            -moz-appearance: none
+        }
+
+        input[type=search] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box
+        }
+
+        textarea {
+            overflow: auto;
+            vertical-align: top;
+            resize: vertical
+        }
+
+        audio,
+        canvas,
+        video {
+            display: inline-block;
+            max-width: 100%
+        }
+
+        audio:not([controls]) {
+            display: none;
+            height: 0
+        }
+
+        [hidden] {
+            display: none
+        }
+
+        html {
+            font-size: 100%;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
+
+        a:focus {
+            outline: thin dotted
+        }
+
+        a:active,
+        a:hover {
+            outline: 0
+        }
+
+        img {
+            border: 0;
+            -ms-interpolation-mode: bicubic
+        }
+
+        figure {
+            margin: 0
+        }
+
+        form {
+            margin: 0
+        }
+
+        fieldset {
+            border: 1px solid silver;
+            margin: 0 2px;
+            padding: .35em .625em .75em
+        }
+
+        legend {
+            border: 0;
+            padding: 0;
+            white-space: normal
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-size: 100%;
+            margin: 0;
+            vertical-align: baseline
+        }
+
+        button,
+        input {
+            line-height: normal
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        button,
+        html input[type=button],
+        input[type=reset],
+        input[type=submit] {
+            -webkit-appearance: button;
+            cursor: pointer
+        }
+
+        button[disabled],
+        html input[disabled] {
+            cursor: default
+        }
+
+        input[type=checkbox],
+        input[type=radio] {
+            -sizing: border-box;
+            padding: 0
+        }
+
+        input[type=search] {
+            -webkit-appearance: textfield;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box
+        }
+
+        input[type=search]::-webkit-search-cancel-button,
+        input[type=search]::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        button::-moz-focus-inner,
+        input::-moz-focus-inner {
+            border: 0;
+            padding: 0
+        }
+
+        textarea {
+            overflow: auto;
+            vertical-align: top
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        button,
+        html,
+        input,
+        select,
+        textarea {
+            color: #222
+        }
+
+        ::-moz-selection {
+            background: #b3d4fc;
+            text-shadow: none
+        }
+
+        ::selection {
+            background: #b3d4fc;
+            text-shadow: none
+        }
+
+        img {
+            vertical-align: middle
+        }
+
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0
+        }
+
+        textarea {
+            resize: vertical
+        }
+
+        .chromeframe {
+            margin: .2em 0;
+            background: #ccc;
+            color: #000;
+            padding: .2em 0
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+        html,
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 100%;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* p { text-align: justify; } */
+        h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        /* .container { width: 60%; height: 60%; display: grid; grid-template-rows: 100px auto 100px; } */
+        .header,
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .header h1,
+        footer address {
+            color: whitesmoke;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer {
+            padding: 1em;
+            text-align: center;
+        }
+
+        .footer address {
+            font-weight: 300;
+            overflow: hidden;
+        }
+
+        .footer address a {
+            font-weight: 400;
+            color: white;
+        }
+
+        .container {
+            max-width: 280px;
+            background-color: rgba(191, 157, 83, 0.5);
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            border: 3px;
+            border-style: dotted;
+            border-radius: 20%;
+
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10%;
+
+            position: absolute;
+
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+                /* font-family: Arial, Helvetica, sans-serif;
+    max-width: 300px;
+    margin: auto;
+    background-color: darkgray;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50% ) */
+        }
+
+
+
+        #carne {
+            text-align: center;
+            margin: 15px;
+            font-size: 20px;
+            font-weight: 1000;
+            display: inline-block;
+        }
+
+        #bebida {
+            text-align: center;
+            margin: 15px;
+            font-size: 20px;
+            padding-bottom: 20px;
+            font-weight: 1000;
+            display: inline-block;
+        }
+
+        #cerveja {
+            text-align: center;
+            margin: 15px;
+            font-size: 20px;
+            display: inline-block;
+            font-weight: 1000;
+
+        }
+
+        #resultado {
+
+            width: 280px;
+
+            background-color: rgba(255, 255, 255, 0.7);
+
+            border: 3px;
+            border-style: solid;
+            border-radius: 20%;
+
+            position: absolute;
+
+            top: 140%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        input {
+            color: rgba(0, 0, 0, 1);
+            width: 50%;
+            font-size: 20px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(191, 157, 83, 0.4);
+            justify-self: center;
+
+            border: 3px;
+            border-style: solid;
+            border-radius: 20%;
+
+
+
+        }
+
+        input::placeholder {
+            color: #000;
+
+        }
+
+        body {
+            background-image: url(https://kartinkin.net/uploads/posts/2021-08/1630234517_26-kartinkin-com-p-muzhchina-s-shashlikom-yeda-krasivo-foto-30.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            margin: 0 auto;
+            grid-template-columns: 1fr;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px 0px;
+            padding: 6px;
+            font-weight: 1000;
+            font-size: 30px;
+            border-color: black;
+            border: 10px;
+            border-style: double;
+
+        }
+
+        button {
+
+            padding: 25px 60px;
+            border-radius: 40%;
+            justify-self: center;
+            background-color: rgba(222, 195, 138, 0.7);
+
+            border: 4px;
+            border-style: outset;
+            border-color: black;
+            margin: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="container" onload="calcular" onload="botao">
+        <h1 id="titulo">Churrascômetro</h1>
+        <input id="adultos" type="number" name="adultos" placeholder="Adultos" value="">
+        <input id="crianças" type="number" name="Crianças" placeholder="Crianças" value="">
+        <input id="duração" type="number" name="Duração" placeholder="Duração (h)" value="">
+        <button type="submit" onclick="calcular()" id="botao"></button>
+
+
+
+        <ul id="resultado" class="container">
+            <li id="carne"></li>
+            <li id="cerveja"></li>
+            <li id="bebida"></li>
+        </ul>
+        <!-- <div class="" id="resultado">
+            <p id="carne"></p>
+            <p id="cerveja"></p>
+            <p id="bebida"></p>
+        </div>
+    </div> -->
+
+
+
+</body>
+<script>
+    // Carne 400 gr por pessoa + de 6 horas - 650
+    // Cerveja - 1200 ml por Pessoa + 6 horas - 2000 ml
+    // Refrigerante/agua - 1000 ml por pessoa + 6 horas 1500ml
+
+    // crianças valem por 0,5
+
+    let inputAdultos = document.getElementById("adultos")
+    let inputCrianças = document.getElementById("crianças")
+    let inputDuração = document.getElementById("duração")
+
+    let carne = document.getElementById("carne")
+    let cerveja = document.getElementById("cerveja")
+    let bebida = document.getElementById("bebida")
+    var botao = document.getElementById("botao")
+
+    function calcular() {
+        console.log("calculando...")
+
+        console.log("funcionou?")
+        botao.style.backgroundColor = "aqua"
+
+        let = adultos = inputAdultos.value
+        let = crianças = inputCrianças.value
+        let = duracao = inputDuração.value
+
+        let = qdtTotalCarne = carnePP(duracao) * adultos + (carnePP(duracao) / 2 * crianças);
+        let = qdtTotalCerveja = cervejaPP(duracao) * adultos
+        let = qdtTotalBebidas = bebidasPP(duracao) * adultos + (bebidasPP(duracao) / 2 * crianças);
+
+        // O filha da puta usa isso pra `{qdtTotalCarne}` funcionar isso e não fala
+        // uma aspa totalmente diferente que voce nunca usa e só assim voce consegue linkar uma
+        // variavel
+
+        carne.innerHTML = `<li>${qdtTotalCarne / 1000} kg de Carne</li>`
+        cerveja.innerHTML = `<li>${Math.ceil(qdtTotalCerveja / 355)} latas de Cerveja</li>`
+        bebida.innerHTML = `<li>${Math.ceil(qdtTotalBebidas / 2000)} garrafas de bebida</li>`
+        console.log(qdtTotalCarne)
+
+
+
+        setTimeout(function () {
+            botao.style.backgroundColor = 'rgba(222,195,138,0.7)'
+        }, 100)
+    }
+
+    function botao() {
+
+
+    }
+
+
+    function carnePP(duracao) {
+
+        if (duracao >= 6) {
+            return 650
+        } else {
+            return 400
+        }
+    }
+    function cervejaPP(duracao) {
+
+        if (duracao >= 6) {
+            return 2000
+        } else {
+            return 1200
+        }
+    }
+    function bebidasPP(duracao) {
+
+        if (duracao >= 6) {
+            return 1500
+        } else {
+            return 1000
+        }
+
+
+
+
+
+
+        // let carne = 400
+        // if (duracao >= 6){
+        //     carne = 650
+        // }
+
+    }
+
+</script>
+
+</html>

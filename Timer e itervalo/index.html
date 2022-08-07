@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+
+        var numero = 0
+
+        var interval;
+
+        function mudarCor(){
+            let h = document.getElementsByTagName("h1")[0]
+            h.style.color = "blue"
+        }
+
+        function Atualizartext(){
+            let h = document.getElementsByTagName("h1")[0]
+            h.innerHTML += " " + numero;
+            numero++;
+
+        }
+
+        function iniciar(){
+
+            let h = document.getElementsByTagName("h1")[0]
+            h.innerHTML = "Novo Titulo"
+
+// setTimeout serve pra dar um tempo em uma determida coisa, pode ser uma função
+// e depois o tempo em ms
+            setTimeout( mudarCor,1000)
+//                     function, tempo em ms
+// setInterval faz a mesma coisa porem repete infinitamente
+         interval = setInterval( Atualizartext, 3000)
+
+
+        }
+
+        function parar(){
+// para o intervalo no argumento voce criar uma variavel nessa variavel
+// quando for executar o timer ai voce coloca variavel = ao timer desejado    
+            clearInterval(interval)
+
+         //   clearTimeout()
+// para o time tambem mas pra funcioanar tem que executar antes do timer iniciar
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1>Titulo</h1>
+    <input onclick="iniciar()" type="submit" value="iniciar">
+    <input onclick="parar()" type="submit" value="parar">
+
+
+
+
+
+</body>
+</html>

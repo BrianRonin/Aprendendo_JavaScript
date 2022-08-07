@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function h1click(){
+            console.log("Executando a função")
+        }
+
+        function changeh1(variavel){
+            
+            // let variavel = document.getElementById("texto")
+            
+            let variavel2 = document.getElementsByTagName("h1")[0]
+            
+            // console.log (variavel)
+            
+            variavel2.innerText = variavel.value;
+        }
+
+        function hideh1(){
+        let h1 = document.getElementsByTagName("h1")[0]
+        h1.style.display = "none";
+    }
+
+    </script>
+
+    <style>
+        div{
+            padding: 20px;
+            display: inline-block;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h1 onclick="h1click()">Clique em mim</h1>
+    <h1 onclick="this.style.color = 'red'">Clique em mim</h1>
+
+    <h1>clique em mim</h1>
+
+    <div onclick="hideh1()">click</div>
+
+    <input type="text" onchange="changeh1(this)">
+
+</body>
+</html>
